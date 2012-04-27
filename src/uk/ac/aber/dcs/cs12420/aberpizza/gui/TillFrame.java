@@ -27,5 +27,15 @@ public class TillFrame extends JFrame {
 		*/
 		JMenuBar menuBar = new TillFrameMenu(tillPanel);
 		setJMenuBar(menuBar);
+		
+		//set the window properties
+		setSize(900,600);
+		setLocation(100,100);
+		
+		add(tillPanel);
+
+		// set the title and make visible.
+		setTitle("CS124 Individual Project - AberPizza");
+		setVisible(true); 
 	}
 }

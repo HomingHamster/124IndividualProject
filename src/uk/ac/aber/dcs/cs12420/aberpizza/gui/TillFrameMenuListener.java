@@ -32,7 +32,7 @@ public class TillFrameMenuListener implements ActionListener {
 		else if (actionCommand.equals("Help")){
 			//The parent of this should probably be the frame itself,
 			//but i have a link to the diagramPanel here and available
-			//this.tillPanel.showHelp();
+			this.tillPanel.showHelp();
 		}
 	}
 }

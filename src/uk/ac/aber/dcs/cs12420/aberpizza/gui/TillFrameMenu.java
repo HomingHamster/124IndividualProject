@@ -12,18 +12,22 @@ public class TillFrameMenu extends JMenuBar {
 	* Define the layout of the menu.
 	*/
 	private JMenu fileMenu = new JMenu("File");
-	private JMenu optionsMenu = new JMenu("Options");
+	private JMenu adminMenu = new JMenu("Admin");
+	private JMenu helpMenu = new JMenu("Help");
 
 	private JMenuItem newOption = new JMenuItem("New");
 	private JMenuItem save = new JMenuItem("Save");
 	private JMenuItem open = new JMenuItem("Open");
 	private JMenuItem quit = new JMenuItem("Quit");
+	
+	private JMenuItem adminItem = new JMenuItem("thing...");
 
-	private JMenuItem help = new JMenuItem("Help");
+	private JMenuItem helpItem = new JMenuItem("thing...");
 
 	public TillFrameMenu(TillPanel tillPanel) {
 		this.add(fileMenu);
-		this.add(optionsMenu);
+		this.add(adminMenu);
+		this.add(helpMenu);
 		setVisible(true);
 	
 		/*
@@ -42,8 +46,11 @@ public class TillFrameMenu extends JMenuBar {
 	    
 	    fileMenu.add(quit);
 	    quit.addActionListener(menuListener); //Adds listener to button.
+	    
+	    adminMenu.add(adminItem);
+	    adminItem.addActionListener(menuListener); //Adds listener to button.
 	
-	    optionsMenu.add(help);
-	    help.addActionListener(menuListener); //Adds listener to button.
+	    helpMenu.add(helpItem);
+	    helpItem.addActionListener(menuListener); //Adds listener to button.
 	}
 }
