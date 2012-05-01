@@ -25,12 +25,15 @@ public class ItemPanel extends JPanel {
     	this.setLayout(gridBag);
     	gridBag.layoutContainer(this);
     	
+    	cons.fill = GridBagConstraints.BOTH;
+    	
     	//Make a button, add to grid (0,0) and watch for it being clicked.
     	JButton pizzasButton = new JButton("Pizzas");
     	cons.fill = GridBagConstraints.HORIZONTAL;
     	cons.anchor = GridBagConstraints.NORTHWEST;
     	cons.gridx = 0;
     	cons.gridy = 0;
+        cons.weightx = 1.0;
     	gridBag.setConstraints(pizzasButton, cons);
     	this.add(pizzasButton);
     	pizzasButton.addActionListener(buttonListener);
@@ -41,6 +44,7 @@ public class ItemPanel extends JPanel {
     	cons.anchor = GridBagConstraints.NORTHWEST;
     	cons.gridx = 1;
     	cons.gridy = 0;
+        cons.weightx = 1.0;
     	gridBag.setConstraints(sidesButton, cons);
     	this.add(sidesButton);
     	sidesButton.addActionListener(buttonListener);
@@ -51,6 +55,7 @@ public class ItemPanel extends JPanel {
     	cons.anchor = GridBagConstraints.NORTHWEST;
     	cons.gridx = 2;
     	cons.gridy = 0;
+        cons.weightx = 1.0;
     	gridBag.setConstraints(drinksButton, cons);
     	this.add(drinksButton);
     	drinksButton.addActionListener(buttonListener);
@@ -61,8 +66,22 @@ public class ItemPanel extends JPanel {
     	cons.fill = GridBagConstraints.BOTH;
     	cons.gridx = 0;
     	cons.gridy = 1;
+    	cons.weighty = 3.0;
+        cons.weightx = 3.0;
         cons.gridwidth = 3;
     	gridBag.setConstraints(itemList, cons);
     	this.add(itemList);
+    	
+    	//Make a button, add to grid (2,0) and watch for it being clicked.
+    	JButton addButton = new JButton("Add to Order");
+    	cons.fill = GridBagConstraints.HORIZONTAL;
+    	cons.anchor = GridBagConstraints.SOUTH;
+    	cons.gridx = 0;
+    	cons.gridy = 2;
+        cons.weightx = 1.0;
+        cons.weighty = 0.0;
+    	gridBag.setConstraints(addButton, cons);
+    	this.add(addButton);
+    	addButton.addActionListener(buttonListener);
     }
 }

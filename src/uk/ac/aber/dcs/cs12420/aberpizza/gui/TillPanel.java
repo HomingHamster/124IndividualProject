@@ -26,6 +26,8 @@ public class TillPanel extends JPanel {
 		cons.fill = GridBagConstraints.BOTH;
         cons.gridx = 0;
         cons.gridy = 0;
+        cons.weighty = 1.0;
+        cons.weightx = 1.0;
         gridBag.setConstraints(itemPanel, cons);
 		this.add(itemPanel);
 		
@@ -33,6 +35,8 @@ public class TillPanel extends JPanel {
 		cons.fill = GridBagConstraints.BOTH;
         cons.gridx = 1;
         cons.gridy = 0;
+        cons.weighty = 1.0;
+        cons.weightx = 1.0;
         gridBag.setConstraints(summaryPanel, cons);
 		this.add(summaryPanel);
 	}
